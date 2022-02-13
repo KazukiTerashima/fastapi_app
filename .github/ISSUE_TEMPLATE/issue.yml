@@ -1,62 +1,66 @@
-name: Bug Report
-description: File a bug report
-title: "[Bug]: "
-labels: ["bug", "triage"]
+name: Issue
+description: Create a new issue
+title: ""
+labels: ["実装", "bule"]
 assignees:
-  - octocat
+  - you
 body:
   - type: markdown
     attributes:
-      value: |
-        Thanks for taking the time to fill out this bug report!
-  - type: input
-    id: contact
+  - type: textarea
+    id: overview
     attributes:
-      label: Contact Details
-      description: さらに情報が必要な場合、どのように連絡すればよいでしょうか？
-      placeholder: ex. email@example.com
+      label: 概要
+      description: Issueの概要を記入してください
+    validations:
+      required: true
+  - type: textarea
+    id: input
+    attributes:
+      label: 入力資料
+      description: Issueに関連する資料を記入してください。
+      value: "[]()"
     validations:
       required: false
-  - type: textarea
-    id: what-happened
+        - type: textarea
+    id: output
     attributes:
-      label: What happened?
-      description: また、生じると期待されていたことは何でしょうか？
-      placeholder: Tell us what you see!
-      value: "バグが生じました!"
+      label: 実装対象
+      description: 実装対象のものを記入してください。
+      value: "- [ ] "
     validations:
       required: true
-  - type: dropdown
-    id: version
-    attributes:
-      label: Version
-      description: 実行していたソフトウェアのバージョンは?
-      options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
-    validations:
-      required: true
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
-  - type: textarea
-    id: logs
-    attributes:
-      label: Relevant log output
-      description: 関連するログの出力をコピーしてペーストしてください。 これは自動的にコードにフォーマットされるので、バックティックは不要です。
-      render: shell
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: このIssueをサブミットすることで、あなたは私たちの [行動規範](https://example.com)に同意したことになります。
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
+  # - type: dropdown
+  #   id: version
+  #   attributes:
+  #     label: Version
+  #     description: 実行していたソフトウェアのバージョンは?
+  #     options:
+  #       - 1.0.2 (Default)
+  #       - 1.0.3 (Edge)
+  #   validations:
+  #     required: true
+  # - type: dropdown
+  #   id: browsers
+  #   attributes:
+  #     label: What browsers are you seeing the problem on?
+  #     multiple: true
+  #     options:
+  #       - Firefox
+  #       - Chrome
+  #       - Safari
+  #       - Microsoft Edge
+  # - type: textarea
+  #   id: logs
+  #   attributes:
+  #     label: Relevant log output
+  #     description: 関連するログの出力をコピーしてペーストしてください。 これは自動的にコードにフォーマットされるので、バックティックは不要です。
+  #     render: shell
+  # - type: checkboxes
+  #   id: terms
+  #   attributes:
+  #     label: Code of Conduct
+  #     description: このIssueをサブミットすることで、あなたは私たちの [行動規範](https://example.com)に同意したことになります。
+  #     options:
+  #       - label: I agree to follow this project's Code of Conduct
+  #         required: true
