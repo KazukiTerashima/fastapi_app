@@ -1,9 +1,9 @@
 name: Issue
 description: Create a new issue
-title: ""
+title: "issue"
 labels: ["実装", "bule"]
 assignees:
-  - you
+  - ""
 body:
   - type: markdown
     attributes:
